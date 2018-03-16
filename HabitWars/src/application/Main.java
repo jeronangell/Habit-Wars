@@ -38,25 +38,25 @@ public class Main extends Application {
 
 	private void startPro(TaskActionControler tac, Stage primaryStage) {
 		tac.login.loginAct();
-		BorderPane mainBdr= new BorderPane();
+		BorderPane main= new BorderPane();
 		Pane root = new Pane();
 		
-		 mainBdr.setTop(tac.menuBar);
+		 main.setTop(tac.menuBar);
 	       
-	     mainBdr.setCenter(root);
+	     main.setCenter(root);
 		 tac.menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
 		//creates a scroolPane to place tasks in
 		ScrollPane taskScroll = new ScrollPane();
 		taskScroll.setContent(tac.tkpane);
 		taskScroll.setPannable(true);
-		taskScroll.setLayoutY(190);
+		taskScroll.setLayoutY(200);
 		taskScroll.setLayoutX(50);
 		taskScroll.setMinViewportWidth(310);
 		taskScroll.setStyle("-fx-border-color: black ; -fx-border-width: 1px ;");
 		taskScroll.prefViewportHeightProperty().bind(primaryStage.heightProperty().subtract(290));
 		//Create the button that adds tasks
 		Button taskbutton = new Button("new task");
-		taskbutton.setLayoutY(160);
+		taskbutton.setLayoutY(170);
 		taskbutton.setLayoutX(30);
 		taskbutton.setOnAction(et -> {
 			tac.addNewTask();
@@ -64,7 +64,7 @@ public class Main extends Application {
 		
 		tac.open();
 		root.getChildren().addAll(tac.userPane, taskScroll, taskbutton);
-		Scene scene = new Scene(mainBdr, 400, 400);
+		Scene scene = new Scene(main, 400, 400);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setOnCloseRequest(et -> tac.save());
 		primaryStage.setScene(scene);
