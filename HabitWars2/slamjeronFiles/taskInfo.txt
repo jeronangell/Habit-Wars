@@ -1,0 +1,7 @@
+Task Name (play chess) id (4) is checked (false) difficulty (3) startDate (14/03/2018)
+Task Name (run one mile) id (5) is checked (false) difficulty (0) startDate (14/03/2018)
+Task Name (go to school) id (6) is checked (false) difficulty (3) startDate (14/03/2018)
+Task Name (learn) id (7) is checked (false) difficulty (2) startDate (14/03/2018)
+Task Name (play) id (8) is checked (false) difficulty (3) startDate (14/03/2018)
+Task Name (play) id (9) is checked (false) difficulty (2) startDate (14/03/2018)
+Task Name (play) id (10) is checked (false) difficulty (0) startDate (14/03/2018)
