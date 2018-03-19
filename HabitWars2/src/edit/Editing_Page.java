@@ -35,7 +35,7 @@ public class Editing_Page extends  Stage{
 		dateSect.getChildren().addAll(dewDateLbl, startDateDp);
 		HBox DificultySect=new HBox();
 		Label dificultyLbl=new Label("Set Dificulty");
-		
+		difficultyCbx.getItems().addAll("Trivial","Easy","Medium","Hard");
 		DificultySect.getChildren().addAll(dificultyLbl,difficultyCbx);
 		
 		
@@ -59,6 +59,9 @@ public class Editing_Page extends  Stage{
 		saveBtn.setOnAction(e->{
 			
 			TaskInfo taskInfo=new TaskInfo();
+			taskInfo.setName(taskNameTF.getText());
+			taskInfo.setStartDate(startDateDp.getValue());
+			taskInfo.setDificulty(difficultyCbx.getValue().SelectedIndex);
 			this.taskInfo.add(taskInfo);
 			TaskPane taPane=new TaskPane(taskInfo);
 			tkpane.getChildren().add(taPane );
