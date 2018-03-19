@@ -1,4 +1,4 @@
-package application;
+package tasks;
 
 import java.time.LocalDate;
 import javafx.event.ActionEvent;
@@ -22,19 +22,19 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Editing_Page extends  Stage{
-	private  Pane dialogVbox = new Pane();
-	public TextField taskNameTF=new TextField("");
-	public TextField daytf=new TextField("");
-	public   Button saveBtn=new Button("save");
-	public ComboBox<String> dellayTimeFrameCbx=new ComboBox<String>();
-	public ComboBox<String> difficultyCbx=new ComboBox<String>();
-	public boolean[] dayOfWeekBool =new boolean[7];
-	public FlowPane weekPane = new FlowPane();
-	public TextField numtext=new TextField();
-	private LocalDate startdate=LocalDate.now();
-	private DatePicker startDateDp=new DatePicker();
-	public Editing_Page() {
-		
+	
+	public Editing_Page(TaskInfo task) {
+		Pane dialogVbox = new Pane();
+		TextField taskNameTF=new TextField(task.getName());
+		TextField daytf=new TextField("");
+		Button saveBtn=new Button("save");
+		ComboBox<String> dellayTimeFrameCbx=new ComboBox<String>();
+		ComboBox<String> difficultyCbx=new ComboBox<String>();
+		boolean[] dayOfWeekBool =new boolean[7];
+		FlowPane weekPane = new FlowPane();
+		TextField numtext=new TextField();
+		LocalDate startdate=LocalDate.now();
+		DatePicker startDateDp=new DatePicker();
 		this.initModality(Modality.APPLICATION_MODAL);
 		this.initOwner(null);
        
@@ -144,11 +144,11 @@ public class Editing_Page extends  Stage{
         repeatLbl.setLayoutX(50);
         repeatLbl.setLayoutY(130);
        
-        dellayTimeFrameCbx.setValue("Daily");
+        dellayTimeFrameCbx.setValue(dellayTimeFrameCbx.getItems().get(task.getTimeType()));
         dellayTimeFrameCbx.getItems().addAll("Daily","Weekly","Monthly","Yearly");
         dellayTimeFrameCbx.setLayoutY(150);
         dellayTimeFrameCbx.setLayoutX(40);
-        difficultyCbx.setValue("Trivial");
+        difficultyCbx.setValue(difficultyCbx.getItems().get(task.getDificulty()));
         difficultyCbx.getItems().addAll("Trivial","Easy","Medium","Hard");
         difficultyCbx.setLayoutY(90);
         difficultyCbx.setLayoutX(40);
@@ -156,8 +156,7 @@ public class Editing_Page extends  Stage{
         startDateDp.setLayoutX(150);
         startDateDp.setLayoutY(150);
         startDateDp.setMaxWidth(100);
-        startDateDp.setValue(startdate);
-        setStartdate(startDateDp.getValue());
+        startDateDp.setValue(task.getStartDate());
         StackPane timeHolderStp=new StackPane();
         timeHolderStp.setLayoutY(180);
         timeHolderStp.setLayoutX(20);
@@ -182,12 +181,6 @@ public class Editing_Page extends  Stage{
         this.show();
 		
 	}
-	public LocalDate getStartdate() {
-		return startDateDp.getValue();
-	}
-	public void setStartdate(LocalDate startdate) {
-		this.startdate = startdate;
-		startDateDp.setValue(startdate);
-	}
+	
 
 }

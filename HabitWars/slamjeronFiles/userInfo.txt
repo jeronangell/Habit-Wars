@@ -1,1 +1,0 @@
-HP ,(42)LVL ,(2)GOLD ,(24.0)EXP ,(20.0)MANA ,(24.0)NAME ,(darknes)signin ,(16/03/2018)
