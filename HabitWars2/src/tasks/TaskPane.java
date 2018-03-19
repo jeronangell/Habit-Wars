@@ -17,24 +17,23 @@ import javafx.scene.paint.Color;
 
 public class TaskPane extends Pane{
 	// builds the taskPane
-	private EventHandler<ActionEvent> delAction = null;
-	private EventHandler<ActionEvent> toTopAction =null;
-	private EventHandler<ActionEvent> toBotomAction = null;
-	private EventHandler<ActionEvent> editAction =null;
-	private EventHandler<ActionEvent> onCheckAction =null;
-	private boolean checked=false;
-	private String name="";
-	private Button deleatBtn = new Button("Deleat");
-	private Button sendTotopBtn = new Button("to top");
-	private Button sendToBotomBtn = new Button("to botom");
-	private Button editBtn = new Button("edit");
-	private CheckBox taskAcomplishChk=new CheckBox("task name");
-	private HBox chbxhb=new HBox();
-	public HBox bx=new HBox();
+	
 	public TaskPane(){
+		
+	}
+	public TaskPane(TaskInfo taskInfo) {
+		boolean checked=false;
+		 String name="";
+		 Button deleatBtn = new Button("Deleat");
+		 Button sendTotopBtn = new Button("to top");
+		 Button sendToBotomBtn = new Button("to botom");
+		 Button editBtn = new Button("edit");
+		 CheckBox taskAcomplishChk=new CheckBox("task name");
+		 HBox chbxhb=new HBox();
+		 HBox bx=new HBox();
 		editBtn.setPadding(new Insets(0,11,0,11));
 		deleatBtn.setPadding(new Insets(0,11,0,11));
-		
+		taskAcomplishChk.setText(taskInfo.getName());
 		bx.setSpacing(4);
 		bx.setPadding(new Insets(5,10,5,10));
 		bx.setAlignment(Pos.TOP_RIGHT);
@@ -55,55 +54,8 @@ public class TaskPane extends Pane{
 		this.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
 		this.getChildren().addAll(bx,chbxhb);
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-		taskAcomplishChk.setText(name);
-	}
-	public EventHandler<ActionEvent> getDelAction() {
-		return delAction;
-	}
-	public void setDelAction(EventHandler<ActionEvent> delAction) {
-		this.delAction = delAction;
-		deleatBtn.setOnAction(delAction);
-	}
-	public EventHandler<ActionEvent> getToTopAction() {
-		return toTopAction;
-	}
-	public void setToTopAction(EventHandler<ActionEvent> toTopAction) {
-		this.toTopAction = toTopAction;
-		sendTotopBtn.setOnAction(toTopAction);
-	}
-	public EventHandler<ActionEvent> getToBotomAction() {
-		return toBotomAction;
-	}
-	public void setToBotomAction(EventHandler<ActionEvent> toBotomAction) {
-		this.toBotomAction = toBotomAction;
-		sendToBotomBtn.setOnAction(toBotomAction);
-	}
-	public EventHandler<ActionEvent> getEditAction() {
-		return editAction;
-	}
-	public void setEditAction(EventHandler<ActionEvent> editAction) {
-		this.editAction = editAction;
-		editBtn.setOnAction(editAction);
-	}
-	public EventHandler<ActionEvent> getOnCheckAction() {
-		return onCheckAction;
-	}
-	public void setOnCheckAction(EventHandler<ActionEvent> onCheckAction) {
-		this.onCheckAction = onCheckAction;
-		taskAcomplishChk.setOnAction(onCheckAction);
-	}
-	public boolean isChecked() {
-		checked=taskAcomplishChk.isSelected();
-		return checked;
-	}
-	public void setChecked(boolean checked) {
-		this.checked = checked;
-		taskAcomplishChk.setSelected(checked);
-	}
+	
+	
+	
 	
 }

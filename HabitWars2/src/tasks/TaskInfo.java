@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
  */
 public class TaskInfo {
 	
-	private String name="";
+	private String name="Default";
 	private LocalDate startDate=LocalDate.now();
 	private int timeType=0;
 	private int dificulty=0;
