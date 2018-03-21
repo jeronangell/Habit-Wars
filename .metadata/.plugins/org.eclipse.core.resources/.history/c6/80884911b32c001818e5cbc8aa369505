@@ -112,6 +112,7 @@ public class Login_Page extends Stage{
 		if(passWord.length()<5) {
 			return;
 		}
+		//System.out.println(file.exists());
 
 
 if(file.exists()){
@@ -145,6 +146,7 @@ if(file.exists()){
 		  fi = new File(userName+"Files/taskInfo.txt");
 		  fi.createNewFile();
 	} catch (IOException e) {
+	    //exception handling left as an exercise for the reader
 	}
 	logInfo.setVisible(true);
 	newUserPage.setVisible(false);

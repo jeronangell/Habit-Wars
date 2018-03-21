@@ -1,0 +1,4 @@
+Task Name (play chess) id (0) is checked (false) difficulty (0) startDate (20/03/2018)
+Task Name (run) id (1) is checked (false) difficulty (3) startDate (20/03/2018)
+Task Name (go to school) id (2) is checked (false) difficulty (0) startDate (20/03/2018)
+Task Name (do the dishis) id (3) is checked (true) difficulty (3) startDate (20/03/2018)

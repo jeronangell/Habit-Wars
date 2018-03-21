@@ -1,1 +1,1 @@
-HP ,(50)LVL ,(1)GOLD ,(0.0)EXP ,(0.0)MANA ,(0.0)NAME ,(the fantum)signin ,(20/03/2018)
+HP ,(50)LVL ,(1)GOLD ,(4.0)EXP ,(20.0)MANA ,(4.0)NAME ,(the fantum)signin ,(20/03/2018)

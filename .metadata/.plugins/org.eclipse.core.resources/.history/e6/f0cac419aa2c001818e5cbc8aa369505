@@ -30,11 +30,11 @@ public class MyMenuBar extends MenuBar {
         menuUser = new Menu("User");
         
         btnSettings= new MenuItem("settings");
-       menuUser.getItems().addAll(btnLogout,btnReset);
+       menuUser.getItems().addAll(btnLogout,btnReset,btnSettings);
        
-		this.getMenus().addAll(menuUser);
+		this.getMenus().addAll(menuFile, menuEdit, menuView,menuUser);
 	}
-	// grants accessibility to the logout button  settings and reset button
+
 	public void setLogoutAction(EventHandler<ActionEvent> logout) {
 		btnLogout.setOnAction(logout);
 		
