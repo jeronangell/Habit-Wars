@@ -30,7 +30,7 @@ public class Main extends Application {
 	}
 
 	private void startPro(TaskActionControler tac, Stage primaryStage) {
-		
+		// opens the main page.
 		BorderPane main= new BorderPane();
 		Pane root = new Pane();
 		

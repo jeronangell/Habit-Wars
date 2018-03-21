@@ -18,9 +18,7 @@ public class RewardsPane extends FlowPane{
 		this.getChildren().addAll(healBtn,treasurChestBtn);
 		
 	}
-	public void healBtnclicked() {
-		System.out.println("heal button clicked");
-	}
+	// Allows other cases to edit the buttons actions
 	public EventHandler<ActionEvent> getHealAction() {
 		return healAction;
 	}

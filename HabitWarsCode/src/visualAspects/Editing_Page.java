@@ -41,7 +41,7 @@ public class Editing_Page extends  Stage{
         Label taskNameLbl=new Label("task Name");
         taskNameLbl.setLayoutY(10);
         taskNameLbl.setLayoutX(35);
-        
+        // sets the location of the taskNameTF.
         taskNameTF.setLayoutY(30);
         taskNameTF.setLayoutX(30);
         
@@ -53,6 +53,7 @@ public class Editing_Page extends  Stage{
         Button fridayBtn=new Button("Friday");
         Button saterdayBtn=new Button("Saterday");
         weekPane.setVisible(false);
+        //makes the buttons that are selected change color
 		sundayBtn.setOnAction(new EventHandler<ActionEvent>() {
 		    @Override 
 		    public void handle(ActionEvent e) {
@@ -171,7 +172,6 @@ public class Editing_Page extends  Stage{
        
         weekPane.setVgap(6);
         weekPane.setHgap(2);
-        
         weekPane.setMaxWidth(250);
         weekPane.setMinHeight(120);
         weekPane.getChildren().addAll(sundayBtn,mondayBtn,tusedayBtn,wednesdayBtn,thursdayBtn,fridayBtn,saterdayBtn);

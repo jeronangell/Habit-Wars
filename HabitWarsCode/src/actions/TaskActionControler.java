@@ -55,6 +55,7 @@ public class TaskActionControler {
 	private String username;
 	private String passWord;
 	public MyMenuBar menuBar=new MyMenuBar();
+	//resets all information
 	public void reset() {
 		userInfo.resetAll(50, 0, 0, 0, 1);
 		idcount=0;
@@ -64,7 +65,7 @@ public class TaskActionControler {
 		
 	}
 	
-	
+	// Constructed
 	public TaskActionControler(){
 		
 		userPane.setLayoutY(30);
@@ -80,7 +81,7 @@ public class TaskActionControler {
 			System.out.println("you have full health");
 		});
 	}
-
+	// creates a new task
 	public void addNewTask() {
 		TaskPane taskPane = new TaskPane();
 
@@ -98,7 +99,7 @@ public class TaskActionControler {
 		// this is the task button controls
 
 	}
-
+	//opens a task using TaskInfo
 	public void openTask(TaskInfo curintTk) {
 		TaskPane taskPane = new TaskPane();
 		taskPane.setName(curintTk.getName());
@@ -192,7 +193,7 @@ public class TaskActionControler {
 		return taskPane;
 
 	}
-	//alows the user to edit the task 
+	//allows the user to edit the task 
 	private void editTask(TaskPane taskPane, int i) {
 		Editing_Page editingPage = new Editing_Page();
 
@@ -226,15 +227,7 @@ public class TaskActionControler {
 							.setDificulty(editingPage.difficultyCbx.getSelectionModel().getSelectedIndex());
 					taskInfoArrayList.get(i).setStartDate(editingPage.getStartdate());
 
-					/*
-					 * to make it so the user can pick witch day of the week i
-					 * will need to get all the booleans of days selected ant
-					 * store that in the tkInfo array and then use the Calendar
-					 * to see what day it is and what i need to do on that day
-					 * or what is due for brevity i will set it up so each day
-					 * all tasks are due. if you don't want the task to be due
-					 * just set the start date further in the future
-					 */
+					
 				}
 				editingPage.close();
 				return;
@@ -336,20 +329,7 @@ public class TaskActionControler {
 			userInfo.setCompDate(LocalDate.now());
 			fileReader.close();
 
-			/*
-			 * each line in the task text file will equal one task the tasks
-			 * will be read by the taskinfo class to simplify things. then the
-			 * tasks will be created one by one.
-			 * 
-			 * 
-			 */
-			/*
-			 * I will then check the date and compare them with todays date and
-			 * if they were due yesterday than the user will lose health. if no
-			 * tasks were due yesterday than you will recieve some gold and
-			 * mana.
-			 * 
-			 */
+			
 
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -45,11 +45,12 @@ public class Login_Page extends Stage{
 		this.setScene(scene);
 		this.initModality(Modality.APPLICATION_MODAL);
 		this.initOwner(null);
-		
+		this.show();
 		
 		
 	}
 	public void login() {
+		//builds the login page
 		Font fnt=Font.font(20);
 		userNameTf.setPromptText("UserName");
 		PaswordTf.setPromptText("Password");
@@ -67,7 +68,7 @@ public class Login_Page extends Stage{
 		logInfo.setVisible(true);
 		logInfo.toFront();
 		newUserPage.setVisible(false);
-		this.show();
+		
 	}
 	private TextField addUserTf=new TextField();
 	private TextField charecterTf=new TextField();
@@ -76,6 +77,7 @@ public class Login_Page extends Stage{
 	private Button loginPageBtn=new Button("Login page");
 
 	private void newUser() {
+		// builds the user page
 		Font fnt=Font.font(20);
 		addUserTf.setPromptText("UserName");
 		addPasswordTf.setPromptText("Password");
@@ -157,7 +159,7 @@ if(file.exists()){
 	}
 		
 	public boolean loginAct() {
-		
+		// checks and logs in the user.
 		String userStr = userNameTf.getText();
 		String passStr = PaswordTf.getText();
 		if(checkforUser(userStr,passStr)){
@@ -191,7 +193,6 @@ if(file.exists())
 		    while (scanner.hasNextLine()) {
 		    	
 		    String[] nst = scanner.nextLine().split(" ");
-		   // System.out.println( nst[0]);
 		    	if(userStr.equals(nst[0].toLowerCase())&&passStr.equals(nst[1])){
 		    		statusLbl.setText("you are loged in");
 		    		return true;

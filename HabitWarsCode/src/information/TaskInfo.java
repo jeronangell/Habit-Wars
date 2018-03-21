@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
  * 
  */
 public class TaskInfo {
-	
+	//creates the TaskInfo data type.
 	private String name="";
 	private LocalDate startDate=LocalDate.now();
 	private int timeType=0;

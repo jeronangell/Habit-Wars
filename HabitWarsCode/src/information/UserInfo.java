@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class UserInfo {
+	//creates the UserInfo data type 
 	private int health=0;
 	private double exp=0;
 	private double mana=0;
@@ -23,6 +24,7 @@ public class UserInfo {
 		this.setLevel(level);
 		expTillNext=level*100;
 	}
+	//sets the starting value
 public void resetAll(int health,double exp,double mana,double gold,int level) {
 	this.setHealth(health);
 	this.setExp(exp);
@@ -31,13 +33,14 @@ public void resetAll(int health,double exp,double mana,double gold,int level) {
 	this.setLevel(level);
 	expTillNext=level*100;
 }
-	
+	//reads and writs to string
 	public String toString(){
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
 		String svstr="HP ,("+ health+")LVL ,("+level+")GOLD ,("+gold+")EXP ,("+exp+")MANA ,("+mana+")NAME ,("+name+")"+"signin ,("+compDate.format(formatter).toString()+")";
 		return svstr;
 		
 	}
+	
 	public void readUserString(String infoString){
 		//this reads the user info from a string
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");

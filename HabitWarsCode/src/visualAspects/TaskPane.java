@@ -31,7 +31,9 @@ public class TaskPane extends Pane{
 	private CheckBox taskAcomplishChk=new CheckBox("task name");
 	private HBox chbxhb=new HBox();
 	public HBox bx=new HBox();
+	
 	public TaskPane(){
+		//builds the task pane
 		editBtn.setPadding(new Insets(0,11,0,11));
 		deleteBtn.setPadding(new Insets(0,11,0,11));
 		
@@ -55,6 +57,7 @@ public class TaskPane extends Pane{
 		this.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
 		this.getChildren().addAll(bx,chbxhb);
 	}
+	// grants accessibility to other classes the task information
 	public String getName() {
 		return name;
 	}

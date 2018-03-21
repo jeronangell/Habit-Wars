@@ -31,7 +31,7 @@ public class Login_Page extends Stage{
 	private VBox newUserPage=new VBox();
 	
 	public Login_Page(){
-		
+		// sets objects for the registration page
 		logInfo.setSpacing(6);
 		logInfo.setPadding(new Insets(10, 10, 10, 10));
 		logInfo.getChildren().addAll(statusLbl,userNameTf,PaswordTf,loginBtn,newUserBtn);
@@ -50,6 +50,7 @@ public class Login_Page extends Stage{
 		
 	}
 	public void login() {
+		// creates the login page
 		Font fnt=Font.font(20);
 		userNameTf.setPromptText("UserName");
 		PaswordTf.setPromptText("Password");
@@ -78,6 +79,7 @@ public class Login_Page extends Stage{
 	private Button loginPageBtn=new Button("Login page");
 
 	private void newUser() {
+		// Creates the new user page
 		Font fnt=Font.font(20);
 		addUserTf.setPromptText("UserName");
 		addPasswordTf.setPromptText("Password");
@@ -149,7 +151,7 @@ if(file.exists()){
 	}
 		
 	public void loginAct() {
-		
+		//authenticates the user.
 		String userStr = userNameTf.getText();
 		String passStr = PaswordTf.getText();
 		if(checkforUser(userStr,passStr)){

@@ -23,6 +23,7 @@ public class PlayerStatPane extends Pane{
 	private int goldAmnt=1000;
 	private Label playername=new Label();
 	public PlayerStatPane(){
+		//builds the player pane
 		levelLbl.setLayoutY(1);
 		levelLbl.setLayoutX(140);
 		levelLbl.setTooltip(new Tooltip("your Charecters Level"));
@@ -51,6 +52,7 @@ public class PlayerStatPane extends Pane{
 		this.getChildren().addAll(playername,manaBar,hpbar,xpbar,coincirc,goldLbl,levelLbl);
 		
 	}
+	// makes the player pane be editable from other clases.
 	public int getHpint() {
 		return hpint;
 	}
