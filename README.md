@@ -15,16 +15,20 @@ this game is to help people be more productive by giving rewards for doing real 
 I split my code in to four difrent folders actions information start and visualAspects.
 this starts the login page then when the user is verifide the main page opens
 
-TaskActionControler tac = new TaskActionControler(); 
+public void start(Stage primaryStage) throws FileNotFoundException {
+		// adding the task action controller
+		// this basically creates the main pages views
+		TaskActionControler tac = new TaskActionControler();
 
-tac.login.login();
+		tac.login.login();
 		tac.login.setLoginAction(e -> {
 			if (tac.login.loginAct()) {
 				startPro(tac, primaryStage);
 				tac.login.close();
 			}
 		});
-		
+
+	}
 		
 
 ## Motivation
