@@ -46,43 +46,45 @@ import visualAspects.TaskPane;
 public class TaskActionControler {
 	public VBox tkpane = new VBox();
 	public PlayerStatPane userPane = new PlayerStatPane();
-	public Login_Page login=new Login_Page();
+	public Login_Page login = new Login_Page();
 	private UserInfo userInfo = new UserInfo(50, 0, 0, 0, 1);
 	private ArrayList<TaskInfo> taskInfoArrayList = new ArrayList<TaskInfo>();
 	private int idcount = 0;
 	private int curentLvl = 0;
-	public RewardsPane rewardPane=new RewardsPane();
+	public RewardsPane rewardPane = new RewardsPane();
 	private String username;
 	private String passWord;
-	public MyMenuBar menuBar=new MyMenuBar();
-	//resets all information
+	public MyMenuBar menuBar = new MyMenuBar();
+
+	// resets all information
 	public void reset() {
 		userInfo.resetAll(50, 0, 0, 0, 1);
-		idcount=0;
+		idcount = 0;
 		tkpane.getChildren().clear();
 		taskInfoArrayList = new ArrayList<TaskInfo>();
 		save();
-		
+
 	}
-	
+
 	// Constructed
-	public TaskActionControler(){
-		
+	public TaskActionControler() {
+
 		userPane.setLayoutY(30);
 		userPane.setLayoutX(10);
 		tkpane.setSpacing(6);
 		rewardPane.setLayoutY(20);
 		rewardPane.setLayoutX(370);
 		rewardPane.setVgap(5);
-		rewardPane.setHealAction(e->{
-			if(userInfo.getGold()>25&&userInfo.getHealth()<50){
-			userInfo.setHealth(userInfo.getHealth()+15);
-			userInfo.setGold(userInfo.getGold()-25);
-			userPane.setHpint(userInfo.getHealth());
-			userPane.setGold((int) userInfo.getGold());
+		rewardPane.setHealAction(e -> {
+			if (userInfo.getGold() > 25 && userInfo.getHealth() < 50) {
+				userInfo.setHealth(userInfo.getHealth() + 15);
+				userInfo.setGold(userInfo.getGold() - 25);
+				userPane.setHpint(userInfo.getHealth());
+				userPane.setGold((int) userInfo.getGold());
 			}
 		});
 	}
+
 	// creates a new task
 	public void addNewTask() {
 		TaskPane taskPane = new TaskPane();
@@ -101,7 +103,8 @@ public class TaskActionControler {
 		// this is the task button controls
 
 	}
-	//opens a task using TaskInfo
+
+	// opens a task using TaskInfo
 	public void openTask(TaskInfo curintTk) {
 		TaskPane taskPane = new TaskPane();
 		taskPane.setName(curintTk.getName());
@@ -113,7 +116,7 @@ public class TaskActionControler {
 		// this is the task button controls
 
 	}
-	
+
 	private TaskPane setTaskPaneActions(TaskPane taskPane, TaskInfo curintTk) {
 		// this determines what buttons and the check box on the taskPane
 		taskPane.setDelAction(new EventHandler<ActionEvent>() {
@@ -139,7 +142,7 @@ public class TaskActionControler {
 				taskInfoArrayList.add(0, curintTk);
 			}
 		});
-		//the check box for the task
+		// the check box for the task
 		taskPane.setOnCheckAction(e -> {
 			boolean checed = taskPane.isChecked();
 			if (checed) {
@@ -195,7 +198,8 @@ public class TaskActionControler {
 		return taskPane;
 
 	}
-	//allows the user to edit the task 
+
+	// allows the user to edit the task
 	private void editTask(TaskPane taskPane, int i) {
 		Editing_Page editingPage = new Editing_Page();
 
@@ -229,7 +233,6 @@ public class TaskActionControler {
 							.setDificulty(editingPage.difficultyCbx.getSelectionModel().getSelectedIndex());
 					taskInfoArrayList.get(i).setStartDate(editingPage.getStartdate());
 
-					
 				}
 				editingPage.close();
 				return;
@@ -238,7 +241,7 @@ public class TaskActionControler {
 	}
 
 	public void save() {
-		File file = new File(username+"Files/userInfo.txt");
+		File file = new File(username + "Files/userInfo.txt");
 		try {
 			PrintWriter output = new PrintWriter(file);
 			output.print(userInfo.toString());
@@ -246,7 +249,7 @@ public class TaskActionControler {
 			/*
 			 * save tasks
 			 */
-			file = new File(username+"Files/taskInfo.txt");
+			file = new File(username + "Files/taskInfo.txt");
 			file.delete();
 			output = new PrintWriter(file);
 			output.print("");
@@ -263,19 +266,19 @@ public class TaskActionControler {
 	}
 
 	public void checkDate() {
-		//this determines weather the day has changed
+		// this determines weather the day has changed
 		if (!userInfo.getCompDate().equals(LocalDate.now())) {
 			tkpane.getChildren().clear();
 			for (TaskInfo tempTask : taskInfoArrayList) {
 				if (!tempTask.isChecked() && tempTask.isTaskDue()) {
 					userInfo.setHealth(userInfo.getHealth() - (tempTask.getDificulty() + 1));
 					userPane.setHpint(userInfo.getHealth());
-					if(userInfo.getHealth()<=0) {
+					if (userInfo.getHealth() <= 0) {
 						userInfo.setHealth(50);
 						userInfo.setGold(0);
 						userInfo.setExp(0);
-						if(userInfo.getLevel()>1)
-						userInfo.setLevel(userInfo.getLevel()-1);
+						if (userInfo.getLevel() > 1)
+							userInfo.setLevel(userInfo.getLevel() - 1);
 					}
 				}
 				tempTask.setChecked(false);
@@ -287,22 +290,22 @@ public class TaskActionControler {
 	}
 
 	public void open() {
-		//this opens all information from the saved documents.
+		// this opens all information from the saved documents.
 		String ust = "";
 		try {
-			
-			File userStatFile= new File("userInfo/curintUser.txt");
+
+			File userStatFile = new File("userInfo/curintUser.txt");
 			Scanner fileReader = new Scanner(userStatFile);
 			String userline = fileReader.nextLine();
-			 username = userline.split(" ")[0];
-			 passWord=userline.split(" ")[1];
-			 userStatFile = new File(username+"Files/userInfo.txt");
-			 
-			 fileReader = new Scanner(userStatFile);
+			username = userline.split(" ")[0];
+			passWord = userline.split(" ")[1];
+			userStatFile = new File(username + "Files/userInfo.txt");
+
+			fileReader = new Scanner(userStatFile);
 			ust = fileReader.nextLine();
 			userInfo.readUserString(ust);
 			fileReader.close();
-			userStatFile = new File(username+"Files/taskInfo.txt");
+			userStatFile = new File(username + "Files/taskInfo.txt");
 			fileReader = new Scanner(userStatFile);
 			while (fileReader.hasNextLine()) {
 
@@ -312,25 +315,22 @@ public class TaskActionControler {
 
 					if (!tempTask.isChecked() && tempTask.isTaskDue()) {
 						userInfo.setHealth(userInfo.getHealth() - tempTask.getDificulty());
-						if(userInfo.getHealth()<=0) {
+						if (userInfo.getHealth() <= 0) {
 							userInfo.setHealth(50);
 							userInfo.setGold(0);
 							userInfo.setExp(0);
-							if(userInfo.getLevel()>1)
-							userInfo.setLevel(userInfo.getLevel()-1);
+							if (userInfo.getLevel() > 1)
+								userInfo.setLevel(userInfo.getLevel() - 1);
 						}
 					}
 					tempTask.setChecked(false);
 				}
 
-				
 				this.openTask(tempTask);
 				taskInfoArrayList.add(tempTask);
 			}
 			userInfo.setCompDate(LocalDate.now());
 			fileReader.close();
-
-			
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -342,6 +342,6 @@ public class TaskActionControler {
 	}
 
 	public void settings() {
-		
+
 	}
 }
