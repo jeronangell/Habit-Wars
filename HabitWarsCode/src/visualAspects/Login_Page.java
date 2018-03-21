@@ -42,6 +42,14 @@ public class Login_Page extends Stage{
 		StackPane stc=new StackPane(); 
 		stc.getChildren().addAll(logInfo,newUserPage);
 		Scene scene = new Scene(stc,400,400);
+		this.setScene(scene);
+		this.initModality(Modality.APPLICATION_MODAL);
+		this.initOwner(null);
+		
+		
+		
+	}
+	public void login() {
 		Font fnt=Font.font(20);
 		userNameTf.setPromptText("UserName");
 		PaswordTf.setPromptText("Password");
@@ -59,13 +67,7 @@ public class Login_Page extends Stage{
 		logInfo.setVisible(true);
 		logInfo.toFront();
 		newUserPage.setVisible(false);
-		
-		this.setScene(scene);
-		this.initModality(Modality.APPLICATION_MODAL);
-		this.initOwner(null);
 		this.show();
-		
-		
 	}
 	private TextField addUserTf=new TextField();
 	private TextField charecterTf=new TextField();
@@ -74,7 +76,6 @@ public class Login_Page extends Stage{
 	private Button loginPageBtn=new Button("Login page");
 
 	private void newUser() {
-		
 		Font fnt=Font.font(20);
 		addUserTf.setPromptText("UserName");
 		addPasswordTf.setPromptText("Password");
@@ -101,7 +102,6 @@ public class Login_Page extends Stage{
 		newUserPage.toFront();
 	}
 	private void createUser() {
-		// creates the a new user
 		String userName =addUserTf.getText();
 		String passWord =addPasswordTf.getText();
 		String charectername = this.charecterTf.getText();
@@ -157,7 +157,7 @@ if(file.exists()){
 	}
 		
 	public boolean loginAct() {
-		// logs in to a user using the pasword and username
+		
 		String userStr = userNameTf.getText();
 		String passStr = PaswordTf.getText();
 		if(checkforUser(userStr,passStr)){

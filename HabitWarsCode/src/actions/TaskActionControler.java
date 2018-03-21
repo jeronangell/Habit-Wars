@@ -51,12 +51,10 @@ public class TaskActionControler {
 	private ArrayList<TaskInfo> taskInfoArrayList = new ArrayList<TaskInfo>();
 	private int idcount = 0;
 	private int curentLvl = 0;
-	
 	public RewardsPane rewardPane=new RewardsPane();
 	private String username;
 	private String passWord;
 	public MyMenuBar menuBar=new MyMenuBar();
-	//this resets signed in users information
 	public void reset() {
 		userInfo.resetAll(50, 0, 0, 0, 1);
 		idcount=0;
@@ -66,7 +64,7 @@ public class TaskActionControler {
 		
 	}
 	
-	// the constructor
+	
 	public TaskActionControler(){
 		
 		userPane.setLayoutY(30);
