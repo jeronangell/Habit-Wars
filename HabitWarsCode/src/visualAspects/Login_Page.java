@@ -14,6 +14,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.StackPane;
@@ -24,7 +25,7 @@ import javafx.stage.Stage;
 
 public class Login_Page extends Stage {
 	private TextField userNameTf = new TextField("");
-	private TextField PaswordTf = new TextField("");
+	private PasswordField PaswordTf = new PasswordField();
 	private Button newUserBtn = new Button("New User Page");
 	private Button loginBtn = new Button("Login");
 	private Label statusLbl = new Label("Log In Status");
@@ -73,7 +74,7 @@ public class Login_Page extends Stage {
 
 	private TextField addUserTf = new TextField();
 	private TextField charecterTf = new TextField();
-	private TextField addPasswordTf = new TextField();
+	private PasswordField addPasswordTf = new PasswordField();
 	private Button saveBtn = new Button("Save");
 	private Button loginPageBtn = new Button("Login page");
 
@@ -87,6 +88,7 @@ public class Login_Page extends Stage {
 		addUserTf.setFont(fnt);
 		addUserTf.setTooltip(new Tooltip("spaces are not alowed, and must be more than 4 charecters long"));
 		addPasswordTf.setFont(fnt);
+		
 		charecterTf.setFont(fnt);
 		saveBtn.setFont(fnt);
 		loginBtn.setFont(fnt);
