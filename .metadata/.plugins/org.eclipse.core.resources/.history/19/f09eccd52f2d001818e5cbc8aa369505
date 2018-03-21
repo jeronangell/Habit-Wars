@@ -18,8 +18,6 @@ public class Main extends Application {
 		//adding the task action controller
 		//this basically creates the main pages views
 		TaskActionControler tac = new TaskActionControler();
-		
-		tac.login.login();
 		tac.login.setLoginAction(e -> {
 			if(tac.login.loginAct()) {
 			startPro(tac,primaryStage);
@@ -39,7 +37,6 @@ public class Main extends Application {
 	     main.setCenter(root);
 		 tac.menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
 		 tac.menuBar.setLogoutAction(e->{
-			 tac.login.login();
 				tac.login.setLoginAction(et -> {
 					if(tac.login.loginAct()) {
 					startPro(tac,primaryStage);
