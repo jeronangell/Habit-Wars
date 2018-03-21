@@ -76,8 +76,8 @@ public class Main extends Application {
 		toDolist.setLayoutX(140);
 		
 		tac.open();
-		root.getChildren().addAll(tac.userPane, taskScroll, taskbutton,toDolist);
-		Scene scene = new Scene(main, 400, 400);
+		root.getChildren().addAll(tac.userPane, taskScroll, taskbutton,toDolist,tac.rewardPane);
+		Scene scene = new Scene(main, 510, 400);
 		primaryStage.setOnCloseRequest(et -> tac.save());
 		primaryStage.setScene(scene);
 		primaryStage.show();

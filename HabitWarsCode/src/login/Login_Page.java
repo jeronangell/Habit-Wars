@@ -108,7 +108,6 @@ public class Login_Page extends Stage{
 		String passWord =addPasswordTf.getText();
 		String charectername = this.charecterTf.getText();
 		File file = new File("userInfo/login.txt");
-		//System.out.println(file.exists());
 
 
 if(file.exists()){

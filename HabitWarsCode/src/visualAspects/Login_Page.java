@@ -114,7 +114,6 @@ public class Login_Page extends Stage{
 		if(passWord.length()<5) {
 			return;
 		}
-		//System.out.println(file.exists());
 
 
 if(file.exists()){
@@ -183,7 +182,6 @@ if(file.exists()){
 	private boolean checkforUser(String userStr, String passStr) {
 		// opens a file and checks if the user name and password match any in file.
 		File file = new File("userInfo/login.txt");
-		System.out.println(file.exists());
 
 
 if(file.exists())

@@ -122,7 +122,6 @@ public class TaskInfo {
 	public boolean isTaskDue() {
 		if(startDate.toEpochDay()<LocalDate.now().toEpochDay()){
 			setTaskDue(true);
-			System.out.println("task is due");
 		}
 		return taskDue;
 	}

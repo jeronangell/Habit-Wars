@@ -71,14 +71,16 @@ public class TaskActionControler {
 		userPane.setLayoutY(30);
 		userPane.setLayoutX(10);
 		tkpane.setSpacing(6);
+		rewardPane.setLayoutY(20);
+		rewardPane.setLayoutX(370);
+		rewardPane.setVgap(5);
 		rewardPane.setHealAction(e->{
 			if(userInfo.getGold()>25&&userInfo.getHealth()<50){
 			userInfo.setHealth(userInfo.getHealth()+15);
 			userInfo.setGold(userInfo.getGold()-25);
 			userPane.setHpint(userInfo.getHealth());
 			userPane.setGold((int) userInfo.getGold());
-			}else
-			System.out.println("you have full health");
+			}
 		});
 	}
 	// creates a new task
@@ -249,7 +251,6 @@ public class TaskActionControler {
 			output = new PrintWriter(file);
 			output.print("");
 			for (TaskInfo tk : taskInfoArrayList) {
-				System.out.println(tk.toString());
 				output.println(tk.toString());
 			}
 			output.close();
