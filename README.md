@@ -4,13 +4,13 @@
 
 ## Synopsis
 This game is to help people be more productive by giving rewards for doing real-life tasks. The program is rather simple 
- when you first start the program, it will ask you for a username and password. If you don't have a login you may create one by clicking the new user button and adding a username password and your character's name then click log in and enter your username and password. Then you may create tasks that you need to do each day I currently have it so tasks can only be set to be requirement dayley you may put in the name of your task and the difficulty of that task if that task has not been completed by the end of the day you will lose hit points. If you lose all your hit points you lose one level, all of your exp (experience), gold, and one of your gear that you may collect though so far there is no gear to receive.
+ when you first start the program, it will ask you for a username and password. If you don't have a login you may create one by clicking the new user button and adding a username & password and your character's name then click log in and enter your username and password. Then you may create tasks that you need to do each day I currently have it so tasks can only be set to be required dayley you may put in the name of your task and the difficulty of that task if that task has not been completed by the end of the day you will lose hit points. If you lose all your hit points you lose one level, all of your exp (experience), gold, and one of your gear that you may collect, though so far there is no gear to receive.
 
 ## Code Example
 
 I split my code into four different folders actions information start and visual aspects.
-this starts the login page then when the user is verified the main page opens
 
+this starts the login page then when the user is verified the main page opens.
 public void start(Stage primaryStage) throws FileNotFoundException {
         // adding the task action controller
         // this basically creates the main pages views
@@ -27,7 +27,7 @@ public void start(Stage primaryStage) throws FileNotFoundException {
     }
 
 ## Motivation
-The reason I created this program is to help myself and others to get and stay motivated to acomplish there short and long turm goals. Far to oftin I just want to watch youtube or play videogames and I am hoping this game can help harnis my adictive personality.
+The reason I created this program is to help myself and others to get and stay motivated to acomplish there short and long turm goals. Far to oftin I just want to watch youtube or play videogames, and I am hoping this game can help me harnis my adictive personality To make my dreams a reality.
 
 ## Installation
 Clone my repository than in eclipse create a new Java project and make HabitWarsCode the directory
