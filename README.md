@@ -4,7 +4,7 @@
 
 ## Synopsis
 This game is to help people be more productive by giving rewards for doing real-life tasks. The program is rather simple 
- when you first start the program, it will ask you for a username and password. If you don't have a login you may create one by clicking the new user button and adding a username password and your character's name then click log in and enter your username and password. Then you may create tasks that you need to do each day I currently I have it so tasks can only be set to daily requirement you may put in the name of your task and the difficulty of that task if that task has not been completed by the end of the day you will lose hit points. If you lose all your hit points you lose one level, all of your exp, gold, and one of your gear that you may collect though so far there is no gear to receive.
+ when you first start the program, it will ask you for a username and password. If you don't have a login you may create one by clicking the new user button and adding a username password and your character's name then click log in and enter your username and password. Then you may create tasks that you need to do each day I currently have it so tasks can only be set to be requirement dayley you may put in the name of your task and the difficulty of that task if that task has not been completed by the end of the day you will lose hit points. If you lose all your hit points you lose one level, all of your exp (experience), gold, and one of your gear that you may collect though so far there is no gear to receive.
 
 ## Code Example
 
@@ -27,10 +27,10 @@ public void start(Stage primaryStage) throws FileNotFoundException {
     }
 
 ## Motivation
-the reason I created this program? is because at times I feel that I have a low amount of motivation to do tasks. Like take a shower eat clean or any other task that is needed in the day so I decided that I would create a game that would help you improve your life, and hear it is sort of.  Though it needs a lot of work.
+The reason I created this program is to help myself and others to get and stay motivated to acomplish there short and long turm goals. Far to oftin I just want to watch youtube or play videogames and I am hoping this game can help harnis my adictive personality.
 
 ## Installation
-Clone my repository than in eclipse create a new Java project and make HabitWarsCode java directory
+Clone my repository than in eclipse create a new Java project and make HabitWarsCode the directory
 open the src folder then the start package then start.Java. and hit-run
 BorderPane main = new BorderPane();
         Pane root = new Pane();
