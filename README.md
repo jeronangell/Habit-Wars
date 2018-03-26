@@ -10,8 +10,9 @@ This game is to help people be more productive by giving rewards for doing real-
 
 I split my code into four different folders actions information start and visual aspects.
 
-this starts the login page then when the user is verified the main page opens.
-public void start(Stage primaryStage) throws FileNotFoundException {
+the code below starts my program.
+
+        public void start(Stage primaryStage) throws FileNotFoundException {
         // adding the task action controller
         // this basically creates the main pages views
         TaskActionControler tac = new TaskActionControler();
@@ -27,7 +28,7 @@ public void start(Stage primaryStage) throws FileNotFoundException {
     }
 
 ## Motivation
-The reason I created this program is to help myself and others to get and stay motivated to acomplish there short and long turm goals. Far to oftin I just want to watch youtube or play videogames, and I am hoping this game can help me harnis my adictive personality To make my dreams a reality.
+The reason I created this program is to help myself and others to get and stay motivated to acomplish there short and long turm goals. Far to oftin the lurr of instant pleasur outways the , and I am hoping this game can help me harnis my adictive personality To make my dreams a reality.
 
 ## Installation
 Clone my repository than in eclipse create a new Java project and make HabitWarsCode the directory
