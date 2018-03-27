@@ -33,10 +33,11 @@ The reason I created this program is to help myself and others to get and stay m
 ## Installation
 Clone my repository than in eclipse create a new Java project and make HabitWarsCode the directory
 open the src folder then the start package then start.Java. and hit-run
-BorderPane main = new BorderPane();
+
+        BorderPane main = new BorderPane();
         Pane root = new Pane();
 
-//this shows the main page
+        //this shows the main page
         tac.open();
         root.getChildren().addAll(tac.userPane, taskScroll, taskbutton, toDolist, tac.rewardPane);
         Scene scene = new Scene(main, 510, 400);
