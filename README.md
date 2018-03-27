@@ -3,8 +3,7 @@
  to start my program run the file in the Habit-Wars/src/start/main.java
 
 ## Synopsis
-This game is to help people be more productive by giving rewards for doing real-life tasks. The program is rather simple 
- when you first start the program, it will ask you for a username and password. If you don't have a login you may create one by clicking the new user button and adding a username & password and your character's name then click log in and enter your username and password. Then you may create tasks that you need to do each day I currently have it so tasks can only be set to be required dayley you may put in the name of your task and the difficulty of that task if that task has not been completed by the end of the day you will lose hit points. If you lose all your hit points you lose one level, all of your exp (experience), gold, and one of your gear that you may collect, though so far there is no gear to receive.
+This game is to help people be more productive by giving rewards for doing real-life tasks. The program is rather simple when you first start the program, it will ask you for a username and password. If you don't have a login you may create one by clicking the new user button and adding a username & password and your character's name then click log in and enter your username and password. Then you may create tasks that you need to do each day I currently have it so tasks can only be set to be required daily you may put in the name of your task and the difficulty of that task if that task has not been completed by the end of the day you will lose hit points. If you lose all your hit points you lose one level, all of your exp (experience), gold, and one of your gear that you may collect, though so far there is no gear to receive.
 
 ## Code Example
 
@@ -28,11 +27,10 @@ the code below starts my program.
     }
 
 ## Motivation
-The reason I created this program is to help myself and others to get and stay motivated to acomplish there short and long turm goals. Far to oftin the lurr of instant pleasur outways the , and I am hoping this game can help me harnis my adictive personality To make my dreams a reality.
+The reason I created this program is to help myself and others to get and stay motivated to accomplish there short and long turn goals. Far to often the lure of instant gratification out ways the drive to accomplish our goals, and I am hoping this game can help me harness my addictive personality to make my dreams a reality.
 
 ## Installation
-Clone my repository than in eclipse create a new Java project and make HabitWarsCode the directory
-open the src folder then the start package then start.Java. and hit-run
+Clone my repository than in eclipse create a new Java project and make HabitWarsCode the directory opens the src folder then the start package then start.Java. and hit run.
 
         BorderPane main = new BorderPane();
         Pane root = new Pane();
@@ -46,11 +44,12 @@ open the src folder then the start package then start.Java. and hit-run
         primaryStage.show();
   
 ## API Reference
-The reference documents are located in the userinfo folder in the habitWarsCode folder and the rest are created as new users are created.
+The reference documents are located in the user info folder in the habitWarsCode folder and the rest are created as new users are created.
 
 ## Tests
 The code is started by running the main.java in HabitwarsCode/src/start/Main.java.
-TaskActionControler tac = new TaskActionControler();
+
+     TaskActionControler tac = new TaskActionControler();
 
         tac.login.login();
         tac.login.setLoginAction(e -> {
