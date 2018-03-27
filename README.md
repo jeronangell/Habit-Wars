@@ -27,7 +27,8 @@ the code below starts my program.
     }
 
 ## Motivation
-The reason I created this program is to help myself and others to get and stay motivated to accomplish there short and long turn goals. Far to often the lure of instant gratification out ways the drive to accomplish our goals, and I am hoping this game can help me harness my addictive personality to make my dreams a reality.
+The reason I created this program is to help myself and others to get and stay motivated to accomplish their short and long turn goals. Far too often the lure of instant gratification out ways the drive to accomplish our goals, and I am hoping this game can help me harness my addictive personality to make my dreams a reality.
+
 
 ## Installation
 Clone my repository than in eclipse create a new Java project and make HabitWarsCode the directory opens the src folder then the start package then start.Java. and hit run.
